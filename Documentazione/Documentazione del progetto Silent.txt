@@ -1,0 +1,72 @@
+Questo progetto si chiama Silent e ha come obiettivo quello di aiutare le persone audiolese
+a comunicare attraverso un riconoscimento in real-time dei segni. Questi segni verranno 
+associati alle corrispettive lettere dell'alfabeto e da ciò si potrà ottenere una parola.
+Attraverso la parola, sarà possibile ottenere delle informazioni con delle query al database,
+che saranno visualizzate nell'app mobile ed esposte attraverso un text-to-speech.
+
+Step per il funzionamento del programma (se vuoi rifare le foto dei segni da capo):
+1.1) Scaricare il template da: https://github.com/nicknochnack/RealTimeObjectDetection, 
+oppure scaricarlo dal prompt, utilizzando il comando git clone + link (opportunatamente 
+aggiunto al cmd)
+1.2) Avviare il programma collected_images.py (opportunatamente commentato), selezionare il
+nome delle cartelle che si vogliono creare e il numero di immagini che il programma dovrà
+fotografare
+1.3) Uscire le foto dalle cartelle appena create e inserirle tutte insieme nella cartella
+"collectedimages" e poi eliminare le cartelle appena svuotate
+1.4) Spostarsi con il cmd nella cartella "Tensorflow". Con la git clone scaricare un 
+programma per il label delle immagini da questo link: https://github.com/tzutalin/labelImg
+1.5) Spostarsi con il cmd nella cartella che si è appena venuta a creare e avviare il 
+programma con: python labelimg.py
+1.6) Open Dir e selezionare la cartella collectedimages, fare la stessa cosa con Change Save
+Dir e abilitare dal menù View, l'Auto Save Mode. Premere "w" e selezionare l'area della mano
+e il nome del gesto, questo processo andrà ripetuto per tutte le immagini e creerà dei file 
+xml che conterrà tutte le informazioni della selezione che noi abbiamo fatto (posizione, 
+nome, altezza, larghezza...)
+1.7) Ora le immagini andranno divise per le cartelle train e test. Es: abbiamo 15 immagini
+per segno + relativi file xml, andranno messe 13 immagini + xml nella cartella test e il
+resto nella cartella train, questo processo andrà ripetuto per tutti i segni (la scelta di 
+come dividere le immagini spetta all'utente)
+1.8) Installare jupyter, tutorial a questo link: https://jupyter.org/install (installare
+jupyter notebook)
+1.9) Avviare jupyter spostandosi nella cartella RealTimeObjectDetection e dal cmd inserire:
+jupyter notebook, si avvierà jupyter sul browser predefinito. Aprire il file Tutorial.ipynb
+1.10) Da qui in poi si illustreranno i vari step (si omette il fatto che per ogni step
+bisogna cliccare il bottone run presente sulla barra in alto, per qualche errore bisogna
+controllare se il bottone in alto sia impostato su trusted):
+0. Setup Paths: sono i vari path che ci serviranno per il nostro programma
+1. Create Label Map: verrà creata una "mappa" con le nostre classi (quindi bisogna modificare
+il nome e l'id)
+2. Create TF records: verrano creati dei record in riferimento al train e al test, serviranno
+per il training del programma, sono file specifici che tensorflow usa per il suo object
+detection API
+3. Download TF Models Pretrained Models from Tensorflow Model Zoo: spostarsi nella cartella
+Tensorflow e verrà scaricato con la git clone da github la cartella models (la libreria
+ufficiale di tensorflow per la object detection)
+4. Copy Model Config to Training Folder: questo passaggio funziona per metà. Crea la cartella,
+sostituendo a "!mkdir" "makedirs", ma non copia il file pipeline.config, quindi bisogna farlo 
+a mano: andare nella cartella pre-trained-models e poi ssd_mobilenet... e copiare il file 
+pipeline.config nella cartella models, my_ssd_mobnet
+5. Update Config For Transfer Learning: modifica il file pipeline.config appena copiato,
+bisogna modificare a mano solo il num_classes con il numero delle nostre classi
+6. Train the model: il programma verrà addestrato attraverso questo comando da inserire nel 
+cmd. Bisogna spostarsi nella cartella RealTimeObjectDetection e incollare il comando, farà 
+tutto da solo (il numero di steps, sarà a scelta dell'utente)
+1.11) Sono presenti anche gli step 7 e 8, ma sono stati copiati e modificati nel file silent.
+py, quindi bisogna aprirlo e avviarlo, il programma dovrebbe riconoscere il segno che la mano
+ha fatto, mostrando a video, il nome del segno e la percentuale di riconoscimento e poi,
+salverà la parola in un file txt. Il programma sarà opportunatamente commentato.
+
+Step per il funzionamento del programma (se vanno bene i segni già inseriti):
+1) Avviare silent(GUI) se vuoi il programma solo su un pc Windows (cliccare il pulsante avvia nella
+GUI e poi silent)
+1.1) Avviare silent server sul server e silent client sul client se si vuole il programma splittato
+(cliccare il pulsante silent nella GUI sia nel client, sia nel server, a questo punto il programma
+effettuare il collegamento tra client e server)
+2) Verrà aperta una finestra di riconoscimento, se riconosce per 5 volte consecutivamente il segno,
+verrà inserito nella parola, premere q per fermare il programma e salvare la parola.
+3) La parola verrà inviata automaticamente al server
+4) Le informazioni saranno disponibili sull'app
+5) Il programma sarà tutto commentato
+6) Le immagini dei segni sono disponibili in \Tensorflow\workspace\images\test o train, il file jpg
+dei segni è affidabile, ma la lettera B è americana e per altre piccole modifiche è consigliata la
+visione del path sopracitato

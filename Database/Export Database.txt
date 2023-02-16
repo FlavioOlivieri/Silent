@@ -1,0 +1,201 @@
+-- MySQL dump 10.16  Distrib 10.1.19-MariaDB, for Win32 (AMD64)
+--
+-- Host: localhost    Database: localhost
+-- ------------------------------------------------------
+-- Server version	10.1.19-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `casa_farmaceutica`
+--
+
+DROP TABLE IF EXISTS `casa_farmaceutica`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `casa_farmaceutica` (
+  `id_casa_farmaceutica` int(4) NOT NULL AUTO_INCREMENT,
+  `ragione_soc` varchar(64) NOT NULL,
+  `nome_cf` varchar(64) DEFAULT NULL,
+  `p_iva` varchar(11) NOT NULL,
+  `citta_cf` varchar(30) DEFAULT NULL,
+  `via_cf` varchar(32) DEFAULT NULL,
+  `cap_cf` varchar(5) DEFAULT NULL,
+  `nazione` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_casa_farmaceutica`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `casa_farmaceutica`
+--
+
+LOCK TABLES `casa_farmaceutica` WRITE;
+/*!40000 ALTER TABLE `casa_farmaceutica` DISABLE KEYS */;
+INSERT INTO `casa_farmaceutica` VALUES (1,'Recordati Industria Chimica e Farmaceutica S.p.A.','Recordati Industria Chimica e Farmaceutica','00748210150','Milano','Via M. Civitali 1','20148','Italia'),(2,'Mylan S.p.A.','Mylan','02789580590','Milano','Viale dell Innovazione 3','20126','Italia'),(3,'Pfizer Italia S.r.l','Pfizer Italia','02774840595','Latina','Via Isonzo 71','04100','Italia'),(4,'Thea Farma S.p.A.','Thea Farma','07649050965','Milano','Via Tiziano 32','20145','Italia'),(5,'DOC Generici S.r.l.','DOC Generici','11845960159','Milano','Via Filippo Turati 40','20121','Italia'),(6,'Sanofi S.p.A.','Sanofi','00832400154','Milano','Viale Luigi Bodio 37/b','20158','Italia'),(7,'A. Menarini Industrie Farmaceutiche Riunite S.r.l.','A. Menarini Industrie Farmaceutiche Riunite','00395270481','Firenze','Via Dei Sette Santi 1/3','50131','Italia'),(8,'Reckitt Benckiser Healthcare (Italia) S.p.A.','Reckitt Benckiser Healthcare','06325010152','Milano','Via Spadolini 7','20141','Italia'),(9,'Dompé farmaceutici S.p.A.','Dompé farmaceutici','00791570153','Milano','Via Santa Lucia 6','20122','Italia'),(10,'Laboratori Baldacci S.p.A.','Laboratori Baldacci','00108790502','Pisa','Via S. Michele degli Scalzi 73','56124','Italia'),(11,'Sanofi S.p.A.','Sanofi','00832400154','Milano','Viale Luigi Bodio 37/b','20158','Italia'),(12,'Glaxosmithkline C.Health S.r.l.','Glaxosmithkline C.Health','00212840235','Verona','Viale dell Agricoltura 7','37135','Italia'),(13,'Bruno Farmaceutici S.p.A.','Bruno Farmaceutici','05038691001','Roma','Via delle Ande 15','00144','Italia'),(14,'Aboca Spa Società Agricola','Aboca Società Agricola','01704430519','Sansepolcro','Località Aboca 20','52037','Italia'),(15,'Novartis International AG','Novartis International','02385200122','Origgio','Largo U. Boccioni 1','21040','Italia'),(16,'Essex Italia S.r.l.','Essex Italia','03296950151','Roma','Via Vitorchiano 151','00189','Italia'),(17,'Coswell S.p.A.','Coswell','00708541206','Funo di Argelato','Via P. Gobetti 4','40050','Italia'),(18,'Sanofi S.p.A.','Sanofi','00832400154','Milano','Viale Luigi Bodio 37/b','20158','Italia'),(19,'AlfaSigma S.p.A.','AlfaSigma','03432221202','Bologna','Via Ragazzi del 99 5','40133','Italia'),(20,'AlfaSigma S.p.A.','AlfaSigma','03432221202','Bologna','Via Ragazzi del 99 5','40133','Italia'),(21,'Vemedia pharma S.r.l.','Vemedia pharma','09896140010','Parma','Viale Tanara Faustino 20','43121','Italia'),(22,'Geofarma S.r.l.','Geofarma','05687680727','Mola di Bari','Corso Italia 6','70042','Italia'),(23,'Angelini Holding S.p.A.','Angelini Holding','00898181003','Roma','Viale Amelia 70','00181','Italia'),(24,'Aziende Chimiche Riunite Angelini Francesco A.C.R.A.F S.p.A.','Aziende Chimiche Riunite Angelini Francesco','01258691003','Roma','Viale Amelia 70','00181','Italia'),(25,'Angelini Holding S.p.A.','Angelini Holding','00898181003','Roma','Viale Amelia 70','00181','Italia'),(26,'Sofar S.p.A.','Sofar','03428610152','Trezzano Rosa','Via Firenze 40','20060','Italia'),(27,'A. Menarini Industrie Farmaceutiche Riunite S.r.l.','A. Menarini Industrie Farmaceutiche Riunite','00395270481','Firenze','Via Dei Sette Santi 1/3','50131','Italia'),(28,'Bayer AG','Bayer AG','05849130157','Milano','Viale Certosa 130','20149','Italia'),(29,'Angelini Holding S.p.A.','Angelini Holding','00898181003','Roma','Viale Amelia 70','00181','Italia'),(30,'Angelini Holding S.p.A.','Angelini Holding','00898181003','Roma','Viale Amelia 70','00181','Italia'),(31,'A. Menarini Industrie Farmaceutiche Riunite S.r.l.','A. Menarini Industrie Farmaceutiche Riunite','00395270481','Firenze','Via Dei Sette Santi 1/3','50131','Italia'),(32,'Sanofi S.p.A.','Sanofi','00832400154','Milano','Viale Luigi Bodio 37/b','20158','Italia'),(33,'IBSA Farmaceutici Italia S.r.l.','IBSA Farmaceutici Italia','10616310156','Lodi','Via della Filanda 30','26900','Italia');
+/*!40000 ALTER TABLE `casa_farmaceutica` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `componente`
+--
+
+DROP TABLE IF EXISTS `componente`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `componente` (
+  `id_componente` int(5) NOT NULL AUTO_INCREMENT,
+  `nome_c` varchar(50) DEFAULT NULL,
+  `descrizione` varchar(2048) DEFAULT NULL,
+  PRIMARY KEY (`id_componente`)
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `componente`
+--
+
+LOCK TABLES `componente` WRITE;
+/*!40000 ALTER TABLE `componente` DISABLE KEYS */;
+INSERT INTO `componente` VALUES (1,'Sporolactobacillus','Lo Sporolactobacillus è un genere di batteri anaerobici, a formazione di endospori, gram-positivi, mobili, a forma di bastoncino, di acido lattico.'),(2,'Vitamina B6',NULL),(3,'Vitamina B1',NULL),(4,'Ibuprofene','Contiene come principio attivo l Ibuprofene, che è un farmaco che appartiene alla categoria dei farmaci antinfiammatori non steroidei (FANS). Questa classe di farmaci rappresenta la categoria di più largo impiego nel trattamento delle malattie reumatiche.'),(5,'Aspartato di potassio emiidrato','Potassio Aspartato Pharmatex è un farmaco a base del principio attivo Acido Aspartico Sale Di Potassio , appartenente alla categoria degli Integratori minerali, Potassio e nello specifico Soluzioni elettrolitiche.'),(6,'Aspartato di magnesio tetraidrato','Aspartato di magnesio, il sale chelato di magnesio dell acido aspartico, è un integratore minerale.'),(7,'Ketotifene','Il ketotifene è un farmaco antistaminico di seconda generazione, antagonista non competitivo dei recettori H1 dell istamina.'),(8,'Il principio attivo è il ramipril','Ramipril è una molecola appartenente alla classe degli ACE inibitori, utilizzata come farmaco nel trattamento dell ipertensione e di alcuni tipi di insufficienza cardiaca cronica.'),(9,'Paracetamolo','Il paracetamolo è un farmaco ad azione analgesica e antipiretica largamente utilizzato sia da solo sia in associazione ad altre sostanze.'),(10,'Clorfenamina maleato','Clorfenamina o Clorfeniramina, generalmente commercializzata come composto nel suo sale clorfenamina maleato, è un antistaminico H1 alchilamminico di prima generazione.'),(11,'Ascorbato di sodio','L ascorbato di sodio è il sale sodico dell acido ascorbico ed è uno dei vitameri della vitamina C. È un solido bianco inodore che diventa più scuro per esposizione alla luce.'),(12,'Cefixima','La cefixima è una molecola dotata di attività antibatterica, un agente battericida, appartenente alla classe delle cefalosporine di terza generazione.'),(13,'Ibuprofene','L ibuprofene è un principio attivo che rientra nella famiglia dei farmaci antinfiammatori non steroidei. Il farmaco è dotato di proprietà analgesica, antinfiammatoria e antipiretica.'),(14,'Ketoprofene sale di lisina','Ketoprofene Sale Di Lisina EG è un farmaco a base del principio attivo Ketoprofene Sale Di Lisina, appartenente alla categoria degli Analgesici FANS e nello specifico Derivati dell acido propionico.'),(15,'Sucralfato','Il sucralfato è un agente citoprotettivo utilizzato principalmente per la cura delle ulcere duodenali e dell ulcera gastrica. È un complesso formato da saccarosio octasolfato e idrossido di polialluminio.'),(16,'Metoclopramide monocloridrato monoidrato','La metoclopramide è un farmaco antiemetico (che cioè inibisce il riflesso del vomito) e gastroprocinetico, in quanto stimola e coordina la motilità del tratto superiore dell apparato digerente. In particolare favorisce lo svuotamento dello stomaco e diminuisce il reflusso dal duodeno nello stomaco e nell esofago.'),(17,'Nafazolina nitrato','La nafazolina è un principio attivo. Il farmaco è commercializzato col nominativo di Rinazina, in genere come spray nasale.'),(18,'Prednisone','Il prednisone è un corticosteroide sintetico di solito assunto per via orale ma può essere anche somministrato per via IM e può essere usato per molte condizioni.'),(19,'Complesso molecolare di Resine',NULL),(20,'Polisaccaridi','I polisaccaridi costituiscono una classe di composti chimici organici appartenente alla classe più ampia dei glucidi.'),(21,'Flavonoidi da Grindelia','La Grindelia è una pianta perenne erbacea.'),(22,'Piantaggine ed Elicrisio','La piantaggine lanciuola è una pianta erbacea officinale perenne della famiglia delle Plantaginaceae. Il genere Helichrysum appartiene alla famiglia delle Asteraceae e comprende circa 600 specie di piante a fiore.'),(23,'Diclofenac dietilammonio','Il diclofenac è un farmaco anti-infiammatorio non steroideo (FANS) tra i più utilizzati come anti-infiammatorio, antireumatico e soprattutto come analgesico.'),(24,'Gentamicina solfato','La gentamicina è un antibiotico amminoglicosidico, ad ampio spettro, prodotto da Micromonospora purpurea, con elevata attività contro batteri Gram positivi e Gram negativi.'),(25,'Betametasone','Il betametasone è un farmaco antinfiammatorio steroideo, appartenente alla classe dei glucocorticoidi a lunga durata d azione.'),(26,'Acqua di mare isotonica','L isotonica è il composto di due soluzioni con la stessa concentrazione di soluto, l ipertonica ha una maggior concentrazione di un soluto rispetto all altro.'),(27,'N-butilbromuro di joscina','N-butilbromuro di joscina (medicinale utilizzato in caso di disturbi della motilità di stomaco e intestino, o delle vie urinarie e biliari).'),(28,'Fusidato di sodio','Il fusidato di sodio, sale sodico dell acido fusidico è una molecola steroidea dotata di una spiccata attività antibiotica, efficace soprattutto nei confronti dei microrganismi Gram positivi come lo Stafilococco aureus.'),(29,'Betametasone disodio fosfato','Betametasone DOC è un farmaco a base del principio attivo Betametasone Sodio Fosfato , appartenente alla categoria degli Corticosteroidi e nello specifico Glicocorticoidi.'),(30,'Alcol benzilico','L alcool benzilico a temperatura ambiente si presenta come un liquido incolore di odore lieve caratteristico, è presente in molti oli essenziali.'),(31,'Benzocaina','La benzocaina è l estere dell acido 4-amminobenzoico e dell etanolo.'),(32,'Cloroxilenolo','Il cloroxilenolo è un composto chimico antimicrobico ad ampio spettro utilizzato per limitare la proliferazione di batteri e alghe.'),(33,'Capsaicina','La capsaicina è un composto chimico presente, in diverse concentrazioni, in piante del genere Capsicum. È un irritante chimico per i mammiferi, compreso l uomo, e produce una sensazione di bruciore in tutti i tessuti con cui viene a contatto.'),(34,'Paracetamolo','Il paracetamolo è un farmaco ad azione analgesica e antipiretica largamente utilizzato sia da solo sia in associazione ad altre sostanze.'),(35,'Nimesulide','Il nimesulide è un farmaco antinfiammatorio non steroideo dotato di proprietà analgesiche e antipiretiche. Il nimesulide agisce inibendo l enzima ciclo-ossigenasi che sintetizza le prostaglandine.'),(36,'Ibuprofene','L ibuprofene è un principio attivo che rientra nella famiglia dei farmaci antinfiammatori non steroidei. Il farmaco è dotato di proprietà analgesica, antinfiammatoria e antipiretica.'),(37,'Lactobacillus casei dg','Lactobacillus càsei è una specie di batterio appartenente alla famiglia delle Lactobacillaceae, un probiotico presente nel microbiota umano.'),(38,'Acido acetilsalicilico','Acido acetilsalicilico: comunemente noto con il nome di aspirina è un farmaco antinfiammatorio non-steroideo della famiglia dei salicilati.'),(39,'Acido ascorbico','L acido L-ascorbico è un composto organico con proprietà antiossidanti presente in natura.'),(40,'Acido acetilsalicilico','L acido acetilsalicilico, comunemente noto con il nome di aspirina è un farmaco antinfiammatorio non-steroideo della famiglia dei salicilati.'),(41,'Acido ascorbico','L acido L-ascorbico è un composto organico con proprietà antiossidanti presente in natura.'),(42,'Ibuprofene','L ibuprofene è un principio attivo che rientra nella famiglia dei farmaci antinfiammatori non steroidei. Il farmaco è dotato di proprietà analgesica, antinfiammatoria e antipiretica.'),(43,'Naprossene','Il naprossene o naproxene è un farmaco anti infiammatorio non steroideo avente proprietà antinfiammatoria, analgesica e antipiretica.'),(44,'Paracetamolo','Il paracetamolo è un farmaco ad azione analgesica e antipiretica largamente utilizzato sia da solo sia in associazione ad altre sostanze.'),(45,'Pseudoefedrina cloridrato','La pseudoefedrina è un farmaco simpaticomimetico appartenente alla famiglia chimica delle 2-feniletilammine e delle anfetamine.'),(46,'Ibuprofene','L ibuprofene è un principio attivo che rientra nella famiglia dei farmaci antinfiammatori non steroidei. Il farmaco è dotato di proprietà analgesica, antinfiammatoria e antipiretica.'),(47,'Diclofenac','Il diclofenac è un farmaco anti-infiammatorio non steroideo tra i più utilizzati come anti-infiammatorio, antireumatico e soprattutto come analgesico.');
+/*!40000 ALTER TABLE `componente` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contiene`
+--
+
+DROP TABLE IF EXISTS `contiene`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contiene` (
+  `id_farmaco` int(5) NOT NULL,
+  `id_componente` int(5) NOT NULL,
+  `quantita` varchar(64) NOT NULL,
+  PRIMARY KEY (`id_farmaco`,`id_componente`),
+  KEY `id_componente` (`id_componente`),
+  CONSTRAINT `contiene_ibfk_1` FOREIGN KEY (`id_farmaco`) REFERENCES `farmaco` (`id_farmaco`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `contiene_ibfk_2` FOREIGN KEY (`id_componente`) REFERENCES `componente` (`id_componente`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contiene`
+--
+
+LOCK TABLES `contiene` WRITE;
+/*!40000 ALTER TABLE `contiene` DISABLE KEYS */;
+INSERT INTO `contiene` VALUES (1,1,'Vitamina B6: 2mg'),(1,2,'Vitamina B1: 1,4mg'),(1,3,'Sporolactobacillus non inferiore a 3 miliardi di spore'),(2,1,'400 mg'),(3,1,'450 mg di aspartato di potassio'),(3,2,'450 mg di aspartato di magnesio'),(4,1,'0,345 mg'),(5,1,'1,25 mg'),(6,1,'300 mg di paracetamolo'),(6,2,'2 mg di clorfenamina maleato'),(6,3,'280 mg di ascorbato di sodio'),(7,1,'400 mg'),(8,1,'200 mg'),(9,1,'30 mg'),(10,1,'20g'),(11,1,'10,5 mg'),(12,1,'1 mg'),(13,1,'25 mg'),(14,1,'33 ml'),(14,2,'33 ml'),(14,3,'33 ml'),(14,4,'33 ml'),(15,1,'1,16 g'),(16,1,'0,166 g di gentamicina solfato'),(16,2,'0,122 g di betametasone'),(17,1,'100 ml'),(18,1,'10 mg'),(19,1,'2g in 100g di crema'),(20,1,'0,6578 mg'),(21,1,'4 g di alcol benzilico'),(21,2,'5 g di benzocaina'),(21,3,'0,1 g di cloroxilenolo'),(22,1,'50 ml in un tubo da 50 ml'),(23,1,'500 mg'),(24,1,'100 mg'),(25,1,'200 mg suddivisi in 12 compresse'),(26,1,'Per 100 gr di prodotto non meno di 7595 miliardi di cellule vive'),(27,1,'0,330 g di Acido acetilsalicilico'),(27,2,'0,200 g di Acido ascorbico'),(28,1,'0,4 g di Acido acetilsalicilico'),(28,2,'0,240 g di Acido ascorbico'),(29,1,'400 mg'),(30,1,'200 mg'),(31,1,'500 mg di paracetamolo'),(31,2,'60 mg di Pseudoefedrina cloridrato'),(32,1,'200 mg'),(33,1,'180 mg');
+/*!40000 ALTER TABLE `contiene` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `farmacia`
+--
+
+DROP TABLE IF EXISTS `farmacia`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `farmacia` (
+  `id_farmacia` int(5) NOT NULL AUTO_INCREMENT,
+  `ragione_soc` varchar(64) NOT NULL,
+  `nome_f` varchar(32) DEFAULT NULL,
+  `via_f` varchar(32) DEFAULT NULL,
+  `citta_f` varchar(20) DEFAULT NULL,
+  `cap_f` int(5) DEFAULT NULL,
+  `p_iva` int(11) DEFAULT NULL,
+  `numero_f` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id_farmacia`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `farmacia`
+--
+
+LOCK TABLES `farmacia` WRITE;
+/*!40000 ALTER TABLE `farmacia` DISABLE KEYS */;
+INSERT INTO `farmacia` VALUES (1,'farmacia del borgo antico','farmacia borgo antico','via gaetano donizetti 71','martina franca',74015,NULL,'0804303262'),(2,'farmacia semeraro dr.eugenio','farmacia semeraro','via principe di napoli 24','martina franca',74015,NULL,'0804807037'),(3,'farmacia introcaso','farmacia introcaso','via giuseppe guglielmi 12','martina franca',74015,NULL,'0808697585'),(4,'farmacia dottor lucarella','farmacia lucarella','via alessandro fighera 12','martina franca',74015,NULL,'0804302396'),(5,'farmacia basile mariangela','farmacia basile','via vincenzo bellini 2','martina franca',74015,NULL,'0804805137'),(6,'farmacia punzi dr.romano','farmacia punzi','via mottola 7','martina franca',74015,NULL,'0804303411'),(7,'farmacia della sanita','farmacia sanita','via giuseppe chiarelli 4','martina franca',74015,NULL,'0804801340'),(8,'farmacia sorace','farmacia sorace','via pergolesi giovanni 59','martina franca',74015,NULL,'0804805632'),(9,'farmacia semeraro dr.rosa','farmacia semeraro','via giuseppe fanelli 76','martina franca',74015,NULL,'0804302555'),(10,'farmacia casavola','farmacia casavola','corso dei mille 146','martina franca',74015,NULL,'0804303532'),(11,'farmacia lembo','farmacia lembo','corso messapia 61','martina franca',74015,NULL,'0804807061'),(12,'farmacia recchia','farmacia recchia','viale carella 21','martina franca',74015,NULL,'0804834872'),(13,'farmacia dr.p.mega','farmacia mega','via lelio fanelli 65','martina franca',74015,NULL,'0804858575'),(14,'farmacia san martino','farmacia san martino','via taranto 89','martina franca',74015,NULL,'0804808661'),(15,'new lab srl','new lab','via antonio gramsci 46','martina franca',74015,NULL,'0803218884'),(16,'farmacia comunale','farmacia comunale','via gorizia 61','locorotondo',70010,NULL,'0804315633'),(17,'farmacia giacovazzo m.g.','farmacia giacovazzo','via cisternino 100','locorotondo',70010,NULL,'0804311203'),(18,'farmacia contini','farmacia contini','piazza marconi 55','locorotondo',70010,NULL,'0804311256'),(19,'farmacia san marco','farmacia san marco','strada comunale 162,48','locorotondo',70010,NULL,'0804383031'),(20,'farmacia itria','farmacia itria','via roma 47','cisternino',72014,NULL,'0804448273'),(21,'farmacia l abbate','farmacia l abbate','via trieste 26','cisternino',72014,NULL,'0804446921'),(22,'farmacia ostuni','farmacia ostuni','via san quirico 55','cisternino',72014,NULL,'0804448030'),(23,'farmacia indiveri vittorio','farmacia indiveri','piazza del popolo 7','alberobello',70011,NULL,'0804321019'),(24,'farmacia belvedere','farmacia belvedere','piazza giovanni boccaccio 3','villa castelli',72029,NULL,'0831867345'),(25,'farmacia d urso maria','farmacia d urso','corso vittorio emanuele III 115','villa castelli',72029,NULL,'0831866080'),(26,'farmacia san pio','farmacia san pio','via ceglie 33','villa castelli',72029,NULL,'0831866007');
+/*!40000 ALTER TABLE `farmacia` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `farmaco`
+--
+
+DROP TABLE IF EXISTS `farmaco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `farmaco` (
+  `id_farmaco` int(5) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(30) NOT NULL,
+  `data_scadenza` int(4) NOT NULL,
+  `prezzo` float(3,2) NOT NULL,
+  `uso` enum('compresse','effervescente','altro') DEFAULT NULL,
+  `id_casa_farmaceutica` int(4) NOT NULL,
+  PRIMARY KEY (`id_farmaco`),
+  KEY `id_casa_farmaceutica` (`id_casa_farmaceutica`),
+  CONSTRAINT `farmaco_ibfk_1` FOREIGN KEY (`id_casa_farmaceutica`) REFERENCES `casa_farmaceutica` (`id_casa_farmaceutica`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `farmaco`
+--
+
+LOCK TABLES `farmaco` WRITE;
+/*!40000 ALTER TABLE `farmaco` DISABLE KEYS */;
+INSERT INTO `farmaco` VALUES (1,'lactopiu',2022,6.43,'effervescente',1),(2,'brufen',2023,3.90,'compresse',2),(3,'polase',2021,9.99,'effervescente',3),(4,'zaditenoftabak',2021,8.90,'altro',4),(5,'ramipril',2022,3.28,'compresse',5),(6,'zerinolflu',2022,7.50,'effervescente',6),(7,'cefixoral',2021,9.99,'compresse',7),(8,'nurofen',2022,4.50,'compresse',8),(9,'oki',2022,4.75,'effervescente',9),(10,'antepsin',2025,7.46,'compresse',10),(11,'plasil',2022,4.50,'compresse',11),(12,'rinazina',2021,6.20,'altro',12),(13,'deltacortene',2021,6.50,'compresse',13),(14,'grintuss',2022,9.99,'altro',14),(15,'voltaren',2022,9.04,'altro',15),(16,'gentalynbeta',2023,9.99,'altro',16),(17,'isomar',2021,7.40,'altro',17),(18,'buscopan',2022,6.90,'compresse',18),(19,'dermomycin',2021,9.99,'altro',19),(20,'bentelan',2021,2.73,'effervescente',20),(21,'foille',2022,4.50,'altro',21),(22,'algenil',2023,9.99,'altro',22),(23,'tachipirina',2022,6.00,'altro',23),(24,'aulin',2022,9.17,'altro',24),(25,'moment',2022,6.90,'compresse',25),(26,'enterolactis',2022,9.99,'compresse',26),(27,'vivinc',2022,4.89,'effervescente',27),(28,'aspirina',2022,5.90,'effervescente',28),(29,'momentact',2022,6.35,'compresse',29),(30,'momendol',2022,8.99,'compresse',30),(31,'vivinduo',2022,5.99,'effervescente',31),(32,'buscofen',2022,3.15,'compresse',32),(33,'flector',2022,8.34,'altro',33);
+/*!40000 ALTER TABLE `farmaco` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `venduto`
+--
+
+DROP TABLE IF EXISTS `venduto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `venduto` (
+  `id_farmacia` int(5) NOT NULL,
+  `id_farmaco` int(5) NOT NULL,
+  PRIMARY KEY (`id_farmacia`,`id_farmaco`),
+  KEY `id_farmaco` (`id_farmaco`),
+  CONSTRAINT `venduto_ibfk_1` FOREIGN KEY (`id_farmacia`) REFERENCES `farmacia` (`id_farmacia`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `venduto_ibfk_2` FOREIGN KEY (`id_farmaco`) REFERENCES `farmaco` (`id_farmaco`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `venduto`
+--
+
+LOCK TABLES `venduto` WRITE;
+/*!40000 ALTER TABLE `venduto` DISABLE KEYS */;
+INSERT INTO `venduto` VALUES (1,1),(2,20),(3,13),(4,14),(5,16),(6,17),(7,2),(8,10),(9,15),(10,19),(11,21),(11,27),(12,9),(13,22),(14,18),(14,31),(15,23),(16,3),(17,4),(18,6),(18,29),(19,25),(20,5),(20,32),(21,26),(21,30),(22,24),(23,7),(23,33),(24,8),(25,11),(25,28),(26,12);
+/*!40000 ALTER TABLE `venduto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'silent'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-05-12 15:44:15
