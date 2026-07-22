@@ -1,5 +1,5 @@
 # Silent
-Translator Sign Language - Italian
+Sign Translator Language - Italian
 
 Questo progetto si chiama Silent e ha come obiettivo quello di aiutare le persone audiolese
 a comunicare attraverso un riconoscimento in real-time dei segni. Questi segni verranno 
